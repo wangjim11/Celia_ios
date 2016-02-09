@@ -1,0 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) ${PODS_ROOT}/OpenTok "${PODS_ROOT}/OpenTok"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/OpenTok" "${PODS_ROOT}/Headers/Public/Parse" "${PODS_ROOT}/Headers/Public/SVProgressHUD" "${PODS_ROOT}/Headers/Public/UICKeyChainStore"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Bolts" -isystem "${PODS_ROOT}/Headers/Public/OpenTok" -isystem "${PODS_ROOT}/Headers/Public/Parse" -isystem "${PODS_ROOT}/Headers/Public/SVProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/UICKeyChainStore"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Bolts" -l"Parse" -l"SVProgressHUD" -l"UICKeyChainStore" -l"c++" -l"sqlite3" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreFoundation" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreMedia" -framework "CoreTelephony" -framework "CoreVideo" -framework "Foundation" -framework "GLKit" -framework "OpenGLES" -framework "OpenTok" -framework "QuartzCore" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -framework "VideoToolbox" -weak_framework "Accounts" -weak_framework "Social"
+PODS_ROOT = ${SRCROOT}/Pods
