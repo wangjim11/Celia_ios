@@ -1,0 +1,13 @@
+/* 
+  LoginStrings.strings
+  MingleLayer
+
+  Created by Lin Zhou on 11/12/15.
+  Copyright © 2015 Infor Global Solutions. All rights reserved.
+*/
+
+login_name = "User name";
+login_pwd = "Password";
+login_btn_title = "Sign in";
+register_btn_title = "Sign up";
+setting_btn_title = "Settings";

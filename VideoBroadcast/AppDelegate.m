@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "RBLogInViewController.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Parse enableLocalDatastore];
+    [Parse setApplicationId:@"ceW4aDXKeMQSWxAYrPUBFYNyJ8pGirg1Z111xRJE"
+                  clientKey:@"SqM03rhGcleZq9IzQ1do8xH4aZtW34qtgJtaTyEN"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window.layer setMasksToBounds:YES];
+    [self.window.layer setShouldRasterize:YES];
+    [self.window.layer setRasterizationScale:[UIScreen mainScreen].scale];
+    self.window.layer.opaque = YES;
+    self.window.rootViewController = [self decideRootViewController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -42,4 +58,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+#pragma mark - Helper Methods
+
+- (void)updateRootViewController {
+    self.window.rootViewController = [self decideRootViewController];
+}
+
+- (UIViewController *)decideRootViewController {
+    if (![PFUser currentUser]) {
+        return [[RBLogInViewController alloc] init];
+    }else{
+        
+    }
+    return nil;
+}
+
 @end
+

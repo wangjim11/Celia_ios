@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C0236F268827826E3917CB8F /* libPods-VideoBroadcast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E4CBEED5519247EE00120E /* libPods-VideoBroadcast.a */; };
+		DB5442031C6C31B5006BFA65 /* SHXBaseLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5441FF1C6C31B5006BFA65 /* SHXBaseLogInViewController.m */; };
+		DB5442041C6C31B5006BFA65 /* LoginAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5442001C6C31B5006BFA65 /* LoginAssets.xcassets */; };
+		DB5442051C6C31B5006BFA65 /* LoginStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB5442011C6C31B5006BFA65 /* LoginStrings.strings */; };
+		DB54420A1C6C3219006BFA65 /* SHXSpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5442091C6C3219006BFA65 /* SHXSpriteLayer.m */; };
+		DB5442141C6C3231006BFA65 /* UIColor+SohoXiColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DB54420D1C6C3231006BFA65 /* UIColor+SohoXiColor.m */; };
+		DB5442151C6C3231006BFA65 /* UIFont+UniversalFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = DB54420F1C6C3231006BFA65 /* UIFont+UniversalFonts.m */; };
+		DB5442161C6C3231006BFA65 /* UIImage+UIImageTint.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5442111C6C3231006BFA65 /* UIImage+UIImageTint.m */; };
+		DB5442171C6C3231006BFA65 /* UIImage+SHXButtonImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5442131C6C3231006BFA65 /* UIImage+SHXButtonImage.m */; };
+		DB54421A1C6C3295006BFA65 /* RBLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5442191C6C3295006BFA65 /* RBLogInViewController.m */; };
+		DB54421D1C6C36BE006BFA65 /* RBSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB54421C1C6C36BE006BFA65 /* RBSignUpViewController.m */; };
+		DB5442211C6C373F006BFA65 /* SHXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5442201C6C373F006BFA65 /* SHXButton.m */; };
 		DB7A1DA11C6990040064C25E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DA01C6990040064C25E /* main.m */; };
 		DB7A1DA41C6990040064C25E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DA31C6990040064C25E /* AppDelegate.m */; };
 		DB7A1DA71C6990040064C25E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DA61C6990040064C25E /* ViewController.m */; };
@@ -39,6 +50,27 @@
 		1377C88157051CD8992A1DC2 /* Pods-VideoBroadcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoBroadcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoBroadcast/Pods-VideoBroadcast.release.xcconfig"; sourceTree = "<group>"; };
 		736BC60DBB11C5E504FF2679 /* Pods-VideoBroadcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoBroadcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoBroadcast/Pods-VideoBroadcast.debug.xcconfig"; sourceTree = "<group>"; };
 		73E4CBEED5519247EE00120E /* libPods-VideoBroadcast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VideoBroadcast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5441FE1C6C31B5006BFA65 /* SHXBaseLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXBaseLogInViewController.h; sourceTree = "<group>"; };
+		DB5441FF1C6C31B5006BFA65 /* SHXBaseLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHXBaseLogInViewController.m; sourceTree = "<group>"; };
+		DB5442001C6C31B5006BFA65 /* LoginAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginAssets.xcassets; sourceTree = "<group>"; };
+		DB5442011C6C31B5006BFA65 /* LoginStrings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LoginStrings.strings; sourceTree = "<group>"; };
+		DB5442021C6C31B5006BFA65 /* SHXBaseLogInConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXBaseLogInConstant.h; sourceTree = "<group>"; };
+		DB5442081C6C3219006BFA65 /* SHXSpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXSpriteLayer.h; sourceTree = "<group>"; };
+		DB5442091C6C3219006BFA65 /* SHXSpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHXSpriteLayer.m; sourceTree = "<group>"; };
+		DB54420C1C6C3231006BFA65 /* UIColor+SohoXiColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SohoXiColor.h"; sourceTree = "<group>"; };
+		DB54420D1C6C3231006BFA65 /* UIColor+SohoXiColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SohoXiColor.m"; sourceTree = "<group>"; };
+		DB54420E1C6C3231006BFA65 /* UIFont+UniversalFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+UniversalFonts.h"; sourceTree = "<group>"; };
+		DB54420F1C6C3231006BFA65 /* UIFont+UniversalFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+UniversalFonts.m"; sourceTree = "<group>"; };
+		DB5442101C6C3231006BFA65 /* UIImage+UIImageTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageTint.h"; sourceTree = "<group>"; };
+		DB5442111C6C3231006BFA65 /* UIImage+UIImageTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageTint.m"; sourceTree = "<group>"; };
+		DB5442121C6C3231006BFA65 /* UIImage+SHXButtonImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SHXButtonImage.h"; sourceTree = "<group>"; };
+		DB5442131C6C3231006BFA65 /* UIImage+SHXButtonImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SHXButtonImage.m"; sourceTree = "<group>"; };
+		DB5442181C6C3295006BFA65 /* RBLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLogInViewController.h; sourceTree = "<group>"; };
+		DB5442191C6C3295006BFA65 /* RBLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLogInViewController.m; sourceTree = "<group>"; };
+		DB54421B1C6C36BE006BFA65 /* RBSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSignUpViewController.h; sourceTree = "<group>"; };
+		DB54421C1C6C36BE006BFA65 /* RBSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSignUpViewController.m; sourceTree = "<group>"; };
+		DB54421F1C6C373E006BFA65 /* SHXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXButton.h; sourceTree = "<group>"; };
+		DB5442201C6C373F006BFA65 /* SHXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHXButton.m; sourceTree = "<group>"; };
 		DB7A1D9C1C6990040064C25E /* VideoBroadcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoBroadcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7A1DA01C6990040064C25E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB7A1DA21C6990040064C25E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +132,73 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB5441FC1C6C3195006BFA65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB5442061C6C31C0006BFA65 /* Log in/Sign Up */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DB5441FD1C6C319F006BFA65 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DB5442071C6C320D006BFA65 /* View */,
+				DB5441FE1C6C31B5006BFA65 /* SHXBaseLogInViewController.h */,
+				DB5441FF1C6C31B5006BFA65 /* SHXBaseLogInViewController.m */,
+				DB5442001C6C31B5006BFA65 /* LoginAssets.xcassets */,
+				DB5442011C6C31B5006BFA65 /* LoginStrings.strings */,
+				DB5442021C6C31B5006BFA65 /* SHXBaseLogInConstant.h */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		DB5442061C6C31C0006BFA65 /* Log in/Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				DB5441FD1C6C319F006BFA65 /* Base */,
+				DB54420B1C6C3223006BFA65 /* Helper Category */,
+				DB5442181C6C3295006BFA65 /* RBLogInViewController.h */,
+				DB5442191C6C3295006BFA65 /* RBLogInViewController.m */,
+				DB54421B1C6C36BE006BFA65 /* RBSignUpViewController.h */,
+				DB54421C1C6C36BE006BFA65 /* RBSignUpViewController.m */,
+			);
+			name = "Log in/Sign Up";
+			sourceTree = "<group>";
+		};
+		DB5442071C6C320D006BFA65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB5442081C6C3219006BFA65 /* SHXSpriteLayer.h */,
+				DB5442091C6C3219006BFA65 /* SHXSpriteLayer.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DB54420B1C6C3223006BFA65 /* Helper Category */ = {
+			isa = PBXGroup;
+			children = (
+				DB54420C1C6C3231006BFA65 /* UIColor+SohoXiColor.h */,
+				DB54420D1C6C3231006BFA65 /* UIColor+SohoXiColor.m */,
+				DB54420E1C6C3231006BFA65 /* UIFont+UniversalFonts.h */,
+				DB54420F1C6C3231006BFA65 /* UIFont+UniversalFonts.m */,
+				DB5442101C6C3231006BFA65 /* UIImage+UIImageTint.h */,
+				DB5442111C6C3231006BFA65 /* UIImage+UIImageTint.m */,
+				DB5442121C6C3231006BFA65 /* UIImage+SHXButtonImage.h */,
+				DB5442131C6C3231006BFA65 /* UIImage+SHXButtonImage.m */,
+			);
+			name = "Helper Category";
+			sourceTree = "<group>";
+		};
+		DB54421E1C6C372A006BFA65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB54421F1C6C373E006BFA65 /* SHXButton.h */,
+				DB5442201C6C373F006BFA65 /* SHXButton.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		DB7A1D931C6990040064C25E = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +224,8 @@
 		DB7A1D9E1C6990040064C25E /* VideoBroadcast */ = {
 			isa = PBXGroup;
 			children = (
+				DB54421E1C6C372A006BFA65 /* View */,
+				DB5441FC1C6C3195006BFA65 /* Controllers */,
 				DB7A1DA21C6990040064C25E /* AppDelegate.h */,
 				DB7A1DA31C6990040064C25E /* AppDelegate.m */,
 				DB7A1DA51C6990040064C25E /* ViewController.h */,
@@ -234,6 +335,15 @@
 				TargetAttributes = {
 					DB7A1D9B1C6990040064C25E = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Z2H99QYMG4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					DB7A1DB41C6990040064C25E = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -270,6 +380,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5442041C6C31B5006BFA65 /* LoginAssets.xcassets in Resources */,
+				DB5442051C6C31B5006BFA65 /* LoginStrings.strings in Resources */,
 				DB7A1DAF1C6990040064C25E /* LaunchScreen.storyboard in Resources */,
 				DB7A1DAC1C6990040064C25E /* Assets.xcassets in Resources */,
 				DB7A1DAA1C6990040064C25E /* Main.storyboard in Resources */,
@@ -346,8 +458,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB7A1DA71C6990040064C25E /* ViewController.m in Sources */,
+				DB54420A1C6C3219006BFA65 /* SHXSpriteLayer.m in Sources */,
+				DB54421A1C6C3295006BFA65 /* RBLogInViewController.m in Sources */,
+				DB5442031C6C31B5006BFA65 /* SHXBaseLogInViewController.m in Sources */,
 				DB7A1DA41C6990040064C25E /* AppDelegate.m in Sources */,
+				DB5442161C6C3231006BFA65 /* UIImage+UIImageTint.m in Sources */,
+				DB5442151C6C3231006BFA65 /* UIFont+UniversalFonts.m in Sources */,
 				DB7A1DA11C6990040064C25E /* main.m in Sources */,
+				DB5442171C6C3231006BFA65 /* UIImage+SHXButtonImage.m in Sources */,
+				DB5442211C6C373F006BFA65 /* SHXButton.m in Sources */,
+				DB54421D1C6C36BE006BFA65 /* RBSignUpViewController.m in Sources */,
+				DB5442141C6C3231006BFA65 /* UIColor+SohoXiColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,10 +610,13 @@
 			baseConfigurationReference = 736BC60DBB11C5E504FF2679 /* Pods-VideoBroadcast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VideoBroadcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.VideoBroadcast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -501,10 +625,13 @@
 			baseConfigurationReference = 1377C88157051CD8992A1DC2 /* Pods-VideoBroadcast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VideoBroadcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.VideoBroadcast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

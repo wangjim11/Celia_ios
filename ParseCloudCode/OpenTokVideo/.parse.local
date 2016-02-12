@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "OpenTokVideo": {
+      "applicationId": "ceW4aDXKeMQSWxAYrPUBFYNyJ8pGirg1Z111xRJE"
+    },
+    "_default": {
+      "link": "OpenTokVideo"
+    }
+  }
+}
