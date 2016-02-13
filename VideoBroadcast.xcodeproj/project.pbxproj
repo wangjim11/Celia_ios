@@ -21,12 +21,12 @@
 		DB5442211C6C373F006BFA65 /* SHXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5442201C6C373F006BFA65 /* SHXButton.m */; };
 		DB7A1DA11C6990040064C25E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DA01C6990040064C25E /* main.m */; };
 		DB7A1DA41C6990040064C25E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DA31C6990040064C25E /* AppDelegate.m */; };
-		DB7A1DA71C6990040064C25E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DA61C6990040064C25E /* ViewController.m */; };
 		DB7A1DAA1C6990040064C25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7A1DA81C6990040064C25E /* Main.storyboard */; };
 		DB7A1DAC1C6990040064C25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB7A1DAB1C6990040064C25E /* Assets.xcassets */; };
 		DB7A1DAF1C6990040064C25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7A1DAD1C6990040064C25E /* LaunchScreen.storyboard */; };
 		DB7A1DBA1C6990040064C25E /* VideoBroadcastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DB91C6990040064C25E /* VideoBroadcastTests.m */; };
 		DB7A1DC51C6990050064C25E /* VideoBroadcastUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DC41C6990050064C25E /* VideoBroadcastUITests.m */; };
+		DBC6537D1C6FDBD9008C1C57 /* RBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6537C1C6FDBD9008C1C57 /* RBMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +75,6 @@
 		DB7A1DA01C6990040064C25E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB7A1DA21C6990040064C25E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB7A1DA31C6990040064C25E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DB7A1DA51C6990040064C25E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB7A1DA61C6990040064C25E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DB7A1DA91C6990040064C25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB7A1DAB1C6990040064C25E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB7A1DAE1C6990040064C25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		DB7A1DC01C6990040064C25E /* VideoBroadcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoBroadcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7A1DC41C6990050064C25E /* VideoBroadcastUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoBroadcastUITests.m; sourceTree = "<group>"; };
 		DB7A1DC61C6990050064C25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC6537B1C6FDBD8008C1C57 /* RBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBMainViewController.h; sourceTree = "<group>"; };
+		DBC6537C1C6FDBD9008C1C57 /* RBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				DB5442061C6C31C0006BFA65 /* Log in/Sign Up */,
+				DBC6537B1C6FDBD8008C1C57 /* RBMainViewController.h */,
+				DBC6537C1C6FDBD9008C1C57 /* RBMainViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -228,8 +230,6 @@
 				DB5441FC1C6C3195006BFA65 /* Controllers */,
 				DB7A1DA21C6990040064C25E /* AppDelegate.h */,
 				DB7A1DA31C6990040064C25E /* AppDelegate.m */,
-				DB7A1DA51C6990040064C25E /* ViewController.h */,
-				DB7A1DA61C6990040064C25E /* ViewController.m */,
 				DB7A1DA81C6990040064C25E /* Main.storyboard */,
 				DB7A1DAB1C6990040064C25E /* Assets.xcassets */,
 				DB7A1DAD1C6990040064C25E /* LaunchScreen.storyboard */,
@@ -457,7 +457,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7A1DA71C6990040064C25E /* ViewController.m in Sources */,
 				DB54420A1C6C3219006BFA65 /* SHXSpriteLayer.m in Sources */,
 				DB54421A1C6C3295006BFA65 /* RBLogInViewController.m in Sources */,
 				DB5442031C6C31B5006BFA65 /* SHXBaseLogInViewController.m in Sources */,
@@ -469,6 +468,7 @@
 				DB5442211C6C373F006BFA65 /* SHXButton.m in Sources */,
 				DB54421D1C6C36BE006BFA65 /* RBSignUpViewController.m in Sources */,
 				DB5442141C6C3231006BFA65 /* UIColor+SohoXiColor.m in Sources */,
+				DBC6537D1C6FDBD9008C1C57 /* RBMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

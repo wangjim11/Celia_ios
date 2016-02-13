@@ -38,8 +38,6 @@
 
 #pragma mark - Overwrite
 
-#pragma mark - Overwrite
-
 - (void)settingsAction {
     RBSignUpViewController *signup = [[RBSignUpViewController alloc] init];
     

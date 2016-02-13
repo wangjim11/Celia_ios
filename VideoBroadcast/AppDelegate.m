@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RBLogInViewController.h"
+#import "RBMainViewController.h"
 #import <Parse/Parse.h>
 
 @interface AppDelegate ()
@@ -69,7 +70,8 @@
     if (![PFUser currentUser]) {
         return [[RBLogInViewController alloc] init];
     }else{
-        
+        RBMainViewController *rootViewController = [[RBMainViewController alloc] init];
+        return [[UINavigationController alloc] initWithRootViewController:rootViewController];
     }
     return nil;
 }
