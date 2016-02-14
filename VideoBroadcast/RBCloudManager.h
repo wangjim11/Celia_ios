@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class RBCamera;
 @interface RBCloudManager : NSObject
+
++ (void)createPublisherTokenWithCamera:(RBCamera * _Nullable)camera completed:(void(^ _Nullable)(NSString * _Nullable newToken, NSError * _Nullable error))complete;
++ (void)createSubscriberTokenWithCamera:(RBCamera * _Nullable)camera completed:(void(^ _Nullable)(NSString * _Nullable newToken, NSError * _Nullable error))complete;
 
 @end
