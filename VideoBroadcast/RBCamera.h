@@ -13,9 +13,7 @@
 @property (nonatomic, strong, nullable) NSString    *address;
 @property (nonatomic, strong, nullable) NSString    *iosUID;
 @property (nonatomic, strong, nullable) NSString    *optSessionID;
-@property (nonatomic, assign) BOOL on;
-@property (nonatomic, assign) BOOL available;
-@property (nonatomic, assign) BOOL activated;
+@property (nonatomic, assign) BOOL isAvailable;
 
 + (void)setDefaultCamera:(RBCamera * _Nullable)camera;
 + (RBCamera * _Nullable)defaultCamera;

@@ -13,9 +13,7 @@
 @dynamic address;
 @dynamic iosUID;
 @dynamic optSessionID;
-@dynamic on;
-@dynamic available;
-@dynamic activated;
+@dynamic isAvailable;
 
 + (void)load {
     [self registerSubclass];
