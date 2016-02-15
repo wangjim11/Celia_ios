@@ -28,10 +28,13 @@
 		DB7A1DC51C6990050064C25E /* VideoBroadcastUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A1DC41C6990050064C25E /* VideoBroadcastUITests.m */; };
 		DBC6537D1C6FDBD9008C1C57 /* RBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6537C1C6FDBD9008C1C57 /* RBMainViewController.m */; };
 		DBC653841C6FEE42008C1C57 /* RBCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC653831C6FEE42008C1C57 /* RBCameraCell.m */; };
-		DBC653871C6FF723008C1C57 /* RBCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC653861C6FF723008C1C57 /* RBCameraViewController.m */; };
+		DBC653871C6FF723008C1C57 /* RBSubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC653861C6FF723008C1C57 /* RBSubscriberViewController.m */; };
 		DBC6538D1C7021E5008C1C57 /* RBOPTSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6538C1C7021E5008C1C57 /* RBOPTSessionManager.m */; };
 		DBC653901C7023BF008C1C57 /* RBCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6538F1C7023BF008C1C57 /* RBCamera.m */; };
 		DBC653931C70273F008C1C57 /* RBCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC653921C70273F008C1C57 /* RBCloudManager.m */; };
+		DBC653961C70E602008C1C57 /* RBUtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC653951C70E602008C1C57 /* RBUtilityManager.m */; };
+		DBC6539A1C716C31008C1C57 /* UIView+ViewConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC653991C716C31008C1C57 /* UIView+ViewConstraints.m */; };
+		DBC6539D1C71751B008C1C57 /* RBPublisherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6539C1C71751B008C1C57 /* RBPublisherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,14 +97,20 @@
 		DBC6537C1C6FDBD9008C1C57 /* RBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBMainViewController.m; sourceTree = "<group>"; };
 		DBC653821C6FEE42008C1C57 /* RBCameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCameraCell.h; sourceTree = "<group>"; };
 		DBC653831C6FEE42008C1C57 /* RBCameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCameraCell.m; sourceTree = "<group>"; };
-		DBC653851C6FF723008C1C57 /* RBCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCameraViewController.h; sourceTree = "<group>"; };
-		DBC653861C6FF723008C1C57 /* RBCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCameraViewController.m; sourceTree = "<group>"; };
+		DBC653851C6FF723008C1C57 /* RBSubscriberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSubscriberViewController.h; sourceTree = "<group>"; };
+		DBC653861C6FF723008C1C57 /* RBSubscriberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSubscriberViewController.m; sourceTree = "<group>"; };
 		DBC6538B1C7021E5008C1C57 /* RBOPTSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBOPTSessionManager.h; sourceTree = "<group>"; };
 		DBC6538C1C7021E5008C1C57 /* RBOPTSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBOPTSessionManager.m; sourceTree = "<group>"; };
 		DBC6538E1C7023BF008C1C57 /* RBCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCamera.h; sourceTree = "<group>"; };
 		DBC6538F1C7023BF008C1C57 /* RBCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCamera.m; sourceTree = "<group>"; };
 		DBC653911C70273F008C1C57 /* RBCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCloudManager.h; sourceTree = "<group>"; };
 		DBC653921C70273F008C1C57 /* RBCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCloudManager.m; sourceTree = "<group>"; };
+		DBC653941C70E602008C1C57 /* RBUtilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBUtilityManager.h; sourceTree = "<group>"; };
+		DBC653951C70E602008C1C57 /* RBUtilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBUtilityManager.m; sourceTree = "<group>"; };
+		DBC653981C716C31008C1C57 /* UIView+ViewConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewConstraints.h"; sourceTree = "<group>"; };
+		DBC653991C716C31008C1C57 /* UIView+ViewConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewConstraints.m"; sourceTree = "<group>"; };
+		DBC6539B1C71751B008C1C57 /* RBPublisherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPublisherViewController.h; sourceTree = "<group>"; };
+		DBC6539C1C71751B008C1C57 /* RBPublisherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPublisherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +162,10 @@
 				DB5442061C6C31C0006BFA65 /* Log in/Sign Up */,
 				DBC6537B1C6FDBD8008C1C57 /* RBMainViewController.h */,
 				DBC6537C1C6FDBD9008C1C57 /* RBMainViewController.m */,
-				DBC653851C6FF723008C1C57 /* RBCameraViewController.h */,
-				DBC653861C6FF723008C1C57 /* RBCameraViewController.m */,
+				DBC653851C6FF723008C1C57 /* RBSubscriberViewController.h */,
+				DBC653861C6FF723008C1C57 /* RBSubscriberViewController.m */,
+				DBC6539B1C71751B008C1C57 /* RBPublisherViewController.h */,
+				DBC6539C1C71751B008C1C57 /* RBPublisherViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +258,7 @@
 				DBC653881C6FF732008C1C57 /* Model */,
 				DB54421E1C6C372A006BFA65 /* View */,
 				DB5441FC1C6C3195006BFA65 /* Controllers */,
+				DBC653971C716C0C008C1C57 /* Helper */,
 				DB7A1DA21C6990040064C25E /* AppDelegate.h */,
 				DB7A1DA31C6990040064C25E /* AppDelegate.m */,
 				DB7A1DA81C6990040064C25E /* Main.storyboard */,
@@ -318,8 +330,19 @@
 				DBC6538C1C7021E5008C1C57 /* RBOPTSessionManager.m */,
 				DBC653911C70273F008C1C57 /* RBCloudManager.h */,
 				DBC653921C70273F008C1C57 /* RBCloudManager.m */,
+				DBC653941C70E602008C1C57 /* RBUtilityManager.h */,
+				DBC653951C70E602008C1C57 /* RBUtilityManager.m */,
 			);
 			name = "Manager Model";
+			sourceTree = "<group>";
+		};
+		DBC653971C716C0C008C1C57 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DBC653981C716C31008C1C57 /* UIView+ViewConstraints.h */,
+				DBC653991C716C31008C1C57 /* UIView+ViewConstraints.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +540,7 @@
 				DBC653841C6FEE42008C1C57 /* RBCameraCell.m in Sources */,
 				DB54420A1C6C3219006BFA65 /* SHXSpriteLayer.m in Sources */,
 				DBC653901C7023BF008C1C57 /* RBCamera.m in Sources */,
+				DBC6539D1C71751B008C1C57 /* RBPublisherViewController.m in Sources */,
 				DB54421A1C6C3295006BFA65 /* RBLogInViewController.m in Sources */,
 				DB5442031C6C31B5006BFA65 /* SHXBaseLogInViewController.m in Sources */,
 				DB7A1DA41C6990040064C25E /* AppDelegate.m in Sources */,
@@ -526,11 +550,13 @@
 				DB7A1DA11C6990040064C25E /* main.m in Sources */,
 				DB5442171C6C3231006BFA65 /* UIImage+SHXButtonImage.m in Sources */,
 				DB5442211C6C373F006BFA65 /* SHXButton.m in Sources */,
+				DBC653961C70E602008C1C57 /* RBUtilityManager.m in Sources */,
+				DBC6539A1C716C31008C1C57 /* UIView+ViewConstraints.m in Sources */,
 				DBC6538D1C7021E5008C1C57 /* RBOPTSessionManager.m in Sources */,
 				DB54421D1C6C36BE006BFA65 /* RBSignUpViewController.m in Sources */,
 				DB5442141C6C3231006BFA65 /* UIColor+SohoXiColor.m in Sources */,
 				DBC6537D1C6FDBD9008C1C57 /* RBMainViewController.m in Sources */,
-				DBC653871C6FF723008C1C57 /* RBCameraViewController.m in Sources */,
+				DBC653871C6FF723008C1C57 /* RBSubscriberViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

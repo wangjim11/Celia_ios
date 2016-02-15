@@ -1,18 +1,18 @@
 //
-//  RBCameraViewController.m
+//  RBPublisherViewController.m
 //  VideoBroadcast
 //
-//  Created by Lin Zhou on 2/13/16.
+//  Created by Lin Zhou on 2/14/16.
 //  Copyright © 2016 Lin Zhou. All rights reserved.
 //
 
-#import "RBCameraViewController.h"
+#import "RBPublisherViewController.h"
 
-@interface RBCameraViewController ()
+@interface RBPublisherViewController ()
 
 @end
 
-@implementation RBCameraViewController
+@implementation RBPublisherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
