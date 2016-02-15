@@ -35,6 +35,8 @@
 		DBC653961C70E602008C1C57 /* RBUtilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC653951C70E602008C1C57 /* RBUtilityManager.m */; };
 		DBC6539A1C716C31008C1C57 /* UIView+ViewConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC653991C716C31008C1C57 /* UIView+ViewConstraints.m */; };
 		DBC6539D1C71751B008C1C57 /* RBPublisherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6539C1C71751B008C1C57 /* RBPublisherViewController.m */; };
+		DBC653A01C7178AE008C1C57 /* RBLocalSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6539F1C7178AE008C1C57 /* RBLocalSessionManager.m */; };
+		DBC653A21C71797C008C1C57 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC653A11C71797C008C1C57 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,9 @@
 		DBC653991C716C31008C1C57 /* UIView+ViewConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewConstraints.m"; sourceTree = "<group>"; };
 		DBC6539B1C71751B008C1C57 /* RBPublisherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPublisherViewController.h; sourceTree = "<group>"; };
 		DBC6539C1C71751B008C1C57 /* RBPublisherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPublisherViewController.m; sourceTree = "<group>"; };
+		DBC6539E1C7178AE008C1C57 /* RBLocalSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLocalSessionManager.h; sourceTree = "<group>"; };
+		DBC6539F1C7178AE008C1C57 /* RBLocalSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLocalSessionManager.m; sourceTree = "<group>"; };
+		DBC653A11C71797C008C1C57 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC653A21C71797C008C1C57 /* AVFoundation.framework in Frameworks */,
 				C0236F268827826E3917CB8F /* libPods-VideoBroadcast.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +148,7 @@
 		4106A6E4D0F07B222304936C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBC653A11C71797C008C1C57 /* AVFoundation.framework */,
 				73E4CBEED5519247EE00120E /* libPods-VideoBroadcast.a */,
 			);
 			name = Frameworks;
@@ -328,6 +335,8 @@
 			children = (
 				DBC6538B1C7021E5008C1C57 /* RBOPTSessionManager.h */,
 				DBC6538C1C7021E5008C1C57 /* RBOPTSessionManager.m */,
+				DBC6539E1C7178AE008C1C57 /* RBLocalSessionManager.h */,
+				DBC6539F1C7178AE008C1C57 /* RBLocalSessionManager.m */,
 				DBC653911C70273F008C1C57 /* RBCloudManager.h */,
 				DBC653921C70273F008C1C57 /* RBCloudManager.m */,
 				DBC653941C70E602008C1C57 /* RBUtilityManager.h */,
@@ -541,6 +550,7 @@
 				DB54420A1C6C3219006BFA65 /* SHXSpriteLayer.m in Sources */,
 				DBC653901C7023BF008C1C57 /* RBCamera.m in Sources */,
 				DBC6539D1C71751B008C1C57 /* RBPublisherViewController.m in Sources */,
+				DBC653A01C7178AE008C1C57 /* RBLocalSessionManager.m in Sources */,
 				DB54421A1C6C3295006BFA65 /* RBLogInViewController.m in Sources */,
 				DB5442031C6C31B5006BFA65 /* SHXBaseLogInViewController.m in Sources */,
 				DB7A1DA41C6990040064C25E /* AppDelegate.m in Sources */,
