@@ -66,6 +66,7 @@
     _optSwitch = ({
         UISwitch *aSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
         aSwitch.translatesAutoresizingMaskIntoConstraints = NO;
+        [aSwitch setOn:NO animated:NO];
         [aSwitch addTarget:self action:@selector(switchValueChanged:) forControlEvents:UIControlEventValueChanged];
         [self.view addSubview:aSwitch];
         
@@ -98,7 +99,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self startSession];
     [self showLocalSession];
 }
 
