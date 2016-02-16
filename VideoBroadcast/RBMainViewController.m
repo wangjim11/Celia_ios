@@ -7,7 +7,10 @@
 //
 
 #import "RBMainViewController.h"
+#import "RBPublisherViewController.h"
+#import "RBSubscriberViewController.h"
 #import "RBCameraCell.h"
+#import "RBOPTSessionManager.h"
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 
@@ -48,6 +51,18 @@
         
         tableView;
     });
+    
+    __weak RBMainViewController *weakSelf = self;
+    [[RBOPTSessionManager sharedInstance] createOrFetchDefaultCamera:^(RBCamera *camera, NSError *error) {
+        if (!error) {
+            PFQuery *query = [PFQuery queryWithClassName:@"Camera"];
+            [query whereKey:@"iosUID" notEqualTo:camera.iosUID];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                weakSelf.cameraArray = objects;
+                [weakSelf.cameraTableView reloadData];
+            }];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,6 +83,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RBCameraCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
+    cell.camera = [_cameraArray objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -76,6 +92,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    RBSubscriberViewController *controller = [[RBSubscriberViewController alloc] init];
+    controller.camera = [_cameraArray objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
