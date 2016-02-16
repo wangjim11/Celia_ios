@@ -8,6 +8,8 @@
 
 #import "RBOPTSessionManager.h"
 #import "RBCloudManager.h"
+#import "RBUtilityManager.h"
+#import "RBCamera.h"
 
 #define OPENTOK_API_KEY     @"45491612"
 
@@ -37,12 +39,36 @@
     self = [super init];
     if (self) {
         _publisherSessionID = [camera.optSessionID copy];
+        _showLogInfo = YES;
     }
     return self;
 }
 
 - (BOOL)isPublishingStream {
     return _publisherSession!=nil && _publisher!=nil;
+}
+
+- (void)createOrFetchDefaultCamera:(void (^)(RBCamera *camera, NSError *error))completion {
+    if ([RBCamera defaultCamera]) {
+        completion([RBCamera defaultCamera], nil);
+    }else{
+        __weak RBOPTSessionManager *weakSelf = self;
+        PFQuery *query = [PFQuery queryWithClassName:@"Camera"];
+        [query whereKey:@"iosUID" equalTo:[[RBUtilityManager sharedInstance] deviceUID]];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if ([objects count]) {
+                RBCamera *camera = [objects objectAtIndex:0];
+                [RBCamera setDefaultCamera:camera];
+                weakSelf.publisherSessionID = [camera.optSessionID copy];
+                completion(camera, error);
+            }else{
+                [RBCloudManager createCamera:^(RBCamera *camera, NSError *error) {
+                    [RBCamera setDefaultCamera:camera];
+                    completion(camera, error);
+                }];
+            }
+        }];
+    }
 }
 
 
@@ -92,19 +118,29 @@
 
 #pragma mark - Publish
 
-- (void)publicLocalStream:(void(^ _Nullable)(OTPublisher * _Nonnull publisher))complete {
+- (void)publicLocalStream:(void(^)(OTPublisher *publisher, NSError *error))complete {
     [self cleanPublishingInfo];
     
     _publisherSession = [[OTSession alloc] initWithApiKey:OPENTOK_API_KEY
-                                                sessionId:_publisherSessionID
+                                                sessionId:[_publisherSessionID copy]
                                                  delegate:self];
+    __weak RBOPTSessionManager *weakSelf = self;
     [RBCloudManager createPublisherTokenWithCamera:[RBCamera defaultCamera] completed:^(NSString * newToken, NSError *error) {
         if ([newToken length] && !error) {
-            [_publisherSession connectWithToken:newToken error:nil];
+            NSError *connectionError = nil;
+            [weakSelf.publisherSession connectWithToken:newToken error:&connectionError];
+            if (complete && connectionError) {
+                complete(nil, connectionError);
+                return;
+            }
             
-            _publisher = [[OTPublisher alloc] initWithDelegate:self name:[[UIDevice currentDevice] name]];
+            weakSelf.publisher = [[OTPublisher alloc] initWithDelegate:weakSelf name:[[UIDevice currentDevice] name]];
             if (complete) {
-                complete(_publisher);
+                complete(weakSelf.publisher, nil);
+            }
+        }else if (error){
+            if (complete) {
+                complete(nil, error);
             }
         }
     }];
@@ -131,7 +167,7 @@
 
 #pragma mark - OTSessionDelegate Methods
 
-- (void)sessionDidConnect:(OTSession *)session {
+- (void)sessionDidConnect:(OTSession*)session {
     if (_showLogInfo) {
         NSLog(@"session did connect");
     }

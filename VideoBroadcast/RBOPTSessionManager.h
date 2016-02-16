@@ -36,6 +36,7 @@
 // Singleton
 + (nonnull instancetype)sharedInstance;
 - (BOOL)isPublishingStream;
+- (void)createOrFetchDefaultCamera:(void (^ _Nonnull)(RBCamera * _Nullable camera, NSError * _Nullable error))completion;
 
 // Subscribe
 - (void)subscribeToCamera:(RBCamera * _Nonnull)camera;
@@ -43,7 +44,7 @@
 - (BOOL)isSubscribingToCamera:(RBCamera * _Nullable)camera;
 
 // publish
-- (void)publicLocalStream:(void(^ _Nullable)(OTPublisher * _Nonnull publisher))complete;
+- (void)publicLocalStream:(void(^ _Nullable)(OTPublisher * _Nonnull publisher, NSError *_Nullable error))complete;
 - (void)unpublicLocalStream;
 - (BOOL)isPublishingLocalStream;
 
