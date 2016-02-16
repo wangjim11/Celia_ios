@@ -81,7 +81,6 @@
         
         // Preview Layer
         _localPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_captureSession];
-        _localPreviewLayer.frame = _localSessionView.bounds;
         _localPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         
         [_captureSession commitConfiguration];
@@ -103,6 +102,7 @@
 }
 
 - (void)showPreview {
+    _localPreviewLayer.frame = _localSessionView.bounds;
     [_localSessionView.layer addSublayer:_localPreviewLayer];
 }
 
