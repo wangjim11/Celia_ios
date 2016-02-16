@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RBCamera.h"
 
 @interface RBCameraCell : UITableViewCell
-
+@property (nonatomic, strong, nonnull) RBCamera     *camera;
 @end
