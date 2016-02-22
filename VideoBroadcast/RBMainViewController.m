@@ -93,9 +93,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
+    RBPublisherViewController *controller = [[RBPublisherViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+    /*
     RBSubscriberViewController *controller = [[RBSubscriberViewController alloc] init];
     controller.camera = [_cameraArray objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
+     */
 }
 
 

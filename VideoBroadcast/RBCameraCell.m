@@ -22,6 +22,9 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
         _statusImageView = ({
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
             imageView.backgroundColor = [UIColor clearColor];
@@ -31,11 +34,11 @@
             
             NSDictionary *viewDict = @{@"imageView":imageView};
             NSDictionary *metrics = @{@"size":@(STATUS_IMAGE_SIZE)};
-            NSArray *hCN = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[imageView(size)]-(20)-|" options:0 metrics:metrics views:viewDict];
+            NSArray *hCN = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(20)-[imageView(size)]" options:0 metrics:metrics views:viewDict];
             [self.contentView addConstraints:hCN];
             
-            NSLayoutConstraint *centerYCN = [NSLayoutConstraint constraintWithItem:imageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
-            [self.contentView addConstraint:centerYCN];
+            NSArray *vCN = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(10)-[imageView(size)]" options:0 metrics:metrics views:viewDict];
+            [self.contentView addConstraints:vCN];
             
             imageView;
         });
@@ -51,11 +54,35 @@
             [self.contentView addSubview:label];
             
             NSDictionary *viewDict = @{@"label":label, @"imageView":_statusImageView};
-            NSArray *hCN = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(20)-[label]-(10)-(imageView)" options:0 metrics:nil views:viewDict];
+            NSArray *hCN = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[imageView]-(10)-[label]-(20)-|" options:0 metrics:nil views:viewDict];
             [self.contentView addConstraints:hCN];
             
-            NSArray *vCN = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(20)-[label]" options:0 metrics:nil views:viewDict];
+            NSArray *vCN = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(10)-[label]" options:0 metrics:nil views:viewDict];
             [self.contentView addConstraints:vCN];
+            
+            label;
+        });
+        
+        _addressLabel = ({
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+            label.backgroundColor = [UIColor whiteColor];
+            label.textColor = [UIColor graphiteColorForTheme:SOHOXIThemeLight];
+            label.numberOfLines = 0;
+            label.lineBreakMode = NSLineBreakByWordWrapping;
+            label.translatesAutoresizingMaskIntoConstraints = NO;
+            [self.contentView addSubview:label];
+            
+            NSLayoutConstraint *leadingCN = [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:_titleLabel attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
+            [self.contentView addConstraint:leadingCN];
+            
+            NSLayoutConstraint *trailingCN = [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:_titleLabel attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+            [self.contentView addConstraint:trailingCN];
+            
+            NSLayoutConstraint *topCN = [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_titleLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:5];
+            [self.contentView addConstraint:topCN];
+            
+            NSLayoutConstraint *bottomCN = [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1 constant:-10];
+            [self.contentView addConstraint:bottomCN];
             
             label;
         });
@@ -77,6 +104,7 @@
     _camera = camera;
     
     self.titleLabel.text = camera.name;
+    self.addressLabel.text = camera.address;
 }
 
 @end

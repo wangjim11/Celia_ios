@@ -123,11 +123,9 @@
     }
     
     if (aSwitch.isOn) {
-        [_optActivityIndicator startAnimating];
         [self hideLocalPreview];
         [self startSession];
     }else{
-        [_optActivityIndicator stopAnimating];
         [self showLocalSession];
         [self stopSession];
     }
@@ -146,18 +144,22 @@
         [defaultCamera saveInBackground];
     }
     
+    [_optActivityIndicator startAnimating];
     __weak RBPublisherViewController *weakSelf = self;
     RBOPTSessionManager *sessionManager = [RBOPTSessionManager sharedInstance];
     sessionManager.publisherDelegate = self;
     [sessionManager publicLocalStream:^(OTPublisher *publisher, NSError *error) {
+        publisher.view.backgroundColor = [UIColor blackColor];
         [weakSelf.optSessionView addSubview:publisher.view];
         publisher.view.translatesAutoresizingMaskIntoConstraints = NO;
         [publisher.view addConstraintsToFillSuperview];
+        [weakSelf.optActivityIndicator stopAnimating];
     }];
 }
 
 - (void)stopSession {
     [[RBOPTSessionManager sharedInstance] unpublicLocalStream];
+    [_optActivityIndicator stopAnimating];
 }
 
 
