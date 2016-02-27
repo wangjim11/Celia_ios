@@ -1,4 +1,4 @@
-var opentok = require("cloud/opentok/opentok.js").createOpenTokSDK("45491612", "0f2e91414959869b342abbebba4f747d55cd9fc3");
+var opentok = require("cloud/opentok/opentok.js").createOpenTokSDK("45499902", "7cc44583b973803ba3b521e4a84e96c128b05fc0");
 
 
 Parse.Cloud.define("createCamera", function(request, response) {

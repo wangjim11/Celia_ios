@@ -11,7 +11,7 @@
 #import "RBUtilityManager.h"
 #import "RBCamera.h"
 
-#define OPENTOK_API_KEY     @"45491612"
+#define OPENTOK_API_KEY     @"45499902"
 
 @interface RBOPTSessionManager ()<OTSessionDelegate, OTPublisherDelegate, OTSubscriberDelegate>
 @property (nonatomic, strong) NSString              *publisherSessionID;
@@ -80,14 +80,26 @@
     }
     [self cleanSubscribingInfo];
     
+    NSLog(@"id: %@", camera.optSessionID);
+    NSLog(@"token: %@", camera.optSessionToken);
+    
     _subscriberSession = [[OTSession alloc] initWithApiKey:OPENTOK_API_KEY
                                                  sessionId:camera.optSessionID
                                                   delegate:self];
-    [RBCloudManager createSubscriberTokenWithCamera:camera completed:^(NSString *newToken, NSError *error) {
-        if ([newToken length] && !error) {
-            [_subscriberSession connectWithToken:newToken error:nil];
+    if (_subscriberSession) {
+        NSError *sessionError = nil;
+        [_subscriberSession connectWithToken:camera.optSessionToken error:&sessionError];
+        if (sessionError) {
+            NSLog(@"error: %@", sessionError);
         }
-    }];
+    }
+    
+//    [RBCloudManager createSubscriberTokenWithCamera:camera completed:^(NSString *newToken, NSError *error) {
+//        NSLog(@"token %@", newToken);
+//        if ([newToken length] && !error) {
+//            [_subscriberSession connectWithToken:newToken error:nil];
+//        }
+//    }];
 }
 
 - (void)unsubscribeFromCamera:(RBCamera *)camera {

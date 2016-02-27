@@ -19,6 +19,8 @@
 @interface RBMainViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView   *cameraTableView;
 @property (nonatomic, strong) NSArray       *cameraArray;
+@property (nonatomic, strong) NSString      *sessionID;
+@property (nonatomic, strong) NSString      *sessionToken;
 @end
 
 @implementation RBMainViewController
@@ -63,6 +65,27 @@
             }];
         }
     }];
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *delegateFreeSession = [NSURLSession sessionWithConfiguration:defaultConfigObject delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
+    
+    [[delegateFreeSession dataTaskWithURL:[NSURL URLWithString:@"https://yam-j-opentok.herokuapp.com/sessionid"]
+                        completionHandler:^(NSData *data, NSURLResponse *response,
+                                            NSError *error) {
+                            /*
+                            NSLog(@"Got response %@ with error %@.\n", response, error);
+                            NSLog(@"DATA:\n%@\nEND DATA\n", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                             */
+                            NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                            NSArray *components = [string componentsSeparatedByString:@";"];
+                            NSString *sessionString = [components objectAtIndex:0];
+                            _sessionID = [[sessionString componentsSeparatedByString:@"="] objectAtIndex:1];
+                            NSString *tokenString = [components objectAtIndex:1];
+                            _sessionToken = [[tokenString componentsSeparatedByString:@"token= "] objectAtIndex:1];
+                            NSLog(@"%@", _sessionID);
+                            NSLog(@"%@", _sessionToken);
+                            
+                        }] resume];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,14 +116,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    RBPublisherViewController *controller = [[RBPublisherViewController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
+
+//    RBPublisherViewController *controller = [[RBPublisherViewController alloc] init];
+//    [self.navigationController pushViewController:controller animated:YES];
+
     
-    /*
     RBSubscriberViewController *controller = [[RBSubscriberViewController alloc] init];
-    controller.camera = [_cameraArray objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:controller animated:YES];
-     */
+    RBCamera *camera = [_cameraArray objectAtIndex:indexPath.row];
+    camera.optSessionID = _sessionID;
+    camera.optSessionToken = _sessionToken;
+    [camera saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        controller.camera = camera;
+        [self.navigationController pushViewController:controller animated:YES];
+    }];
 }
 
 

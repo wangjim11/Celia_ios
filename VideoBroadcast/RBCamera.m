@@ -13,6 +13,7 @@
 @dynamic address;
 @dynamic iosUID;
 @dynamic optSessionID;
+@dynamic optSessionToken;
 @dynamic isAvailable;
 
 + (void)load {
